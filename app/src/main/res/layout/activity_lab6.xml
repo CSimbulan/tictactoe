@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="eecs1022.tictactoe.tictactoeActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name of Player X:"
+        android:id="@+id/labelNameX"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignBottom="@+id/inputNameX"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/inputNameX"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/labelNameX"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name of Player O:"
+        android:id="@+id/labelNameO"
+        android:layout_below="@+id/labelNameX"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignBottom="@+id/inputNameO"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/inputNameO"
+        android:layout_below="@+id/inputNameX"
+        android:layout_toRightOf="@+id/labelNameX"
+        android:layout_alignRight="@+id/inputNameX"
+        android:layout_alignEnd="@+id/inputNameX"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Who Plays First?"
+        android:id="@+id/labelFirst"
+        android:layout_below="@+id/labelNameO"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinnerFirst"
+        android:layout_alignTop="@+id/labelFirst"
+        android:layout_toRightOf="@+id/labelFirst"
+        android:layout_alignRight="@+id/inputNameO"
+        android:layout_alignEnd="@+id/inputNameO"
+        android:entries="@array/playerOptions"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="START/RESTART A GAME"
+        android:id="@+id/buttonStart"
+        android:layout_marginTop="32dp"
+        android:layout_below="@+id/labelFirst"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/spinnerFirst"
+        android:layout_alignEnd="@+id/spinnerFirst"
+        android:onClick="buttonStart"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose a Row Number:"
+        android:id="@+id/labelRow"
+        android:layout_below="@+id/buttonStart"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinnerRow"
+        android:layout_alignTop="@+id/labelRow"
+        android:layout_toRightOf="@+id/labelRow"
+        android:layout_alignRight="@+id/buttonStart"
+        android:layout_alignEnd="@+id/buttonStart"
+        android:entries="@array/integerOptions"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose a Column Number:"
+        android:id="@+id/labelCol"
+        android:layout_alignTop="@+id/spinnerCol"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinnerCol"
+        android:layout_below="@+id/spinnerRow"
+        android:layout_toRightOf="@+id/labelCol"
+        android:layout_marginTop="17dp"
+        android:layout_alignRight="@+id/spinnerRow"
+        android:layout_alignEnd="@+id/spinnerRow"
+        android:entries="@array/integerOptions"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PLAY"
+        android:id="@+id/buttonPlay"
+        android:layout_below="@+id/labelCol"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="33dp"
+        android:layout_alignRight="@+id/spinnerCol"
+        android:layout_alignEnd="@+id/spinnerCol"
+        android:onClick="buttonPlay"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/labelOutput"
+        android:layout_below="@+id/buttonPlay"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="40dp"
+        android:layout_alignRight="@+id/buttonPlay"
+        android:layout_alignEnd="@+id/buttonPlay"
+        android:textAlignment="center"/>
+</RelativeLayout>

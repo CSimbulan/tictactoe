@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Tic-Tac-Toe Game</string>
+
+    <string-array name="playerOptions">
+        <item>Player X</item>
+        <item>Player O</item>
+    </string-array>
+
+    <string-array name="integerOptions">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+</resources>
